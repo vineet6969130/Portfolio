@@ -1,0 +1,356 @@
+/* === ROOT VARIABLES === */
+:root {
+  --teal: #00bfa5;
+  --gray: #555;
+  --light-gray: #f5f5f5;
+  --white: #ffffff;
+  --font: 'Segoe UI', sans-serif;
+}
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--light-gray);
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* === NAVIGATION === */
+nav {
+  background-color: var(--teal);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+}
+
+header h2 {
+  font-size: 2.5rem;
+  color: var(--teal);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--teal);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #009e88;
+}
+
+/* === SECTION TITLE === */
+.section-title {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: var(--teal);
+  text-align: center;
+}
+
+/* === ABOUT === */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-content img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal);
+  transition: transform 0.8s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.about-content img:hover {
+  transform: rotate(360deg);
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.icon-btn {
+  background-color: var(--teal);
+  color: #fff;
+  font-size: 1.3rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background-color: #009e88;
+}
+/* === 3D BUTTONS === */
+.btn, .icon-btn, .form-container button {
+  display: inline-block;
+  background-color: var(--teal);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0, 191, 165, 0.4);
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+
+.btn:hover, .icon-btn:hover, .form-container button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 191, 165, 0.5);
+}
+
+.btn:active, .icon-btn:active, .form-container button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(0, 191, 165, 0.3);
+}
+
+
+/* === GRID LISTS === */
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0 2rem;
+}
+
+.list-grid li {
+  background-color: var(--white);
+  padding: 1rem;
+  border-left: 4px solid var(--teal);
+  border-radius: 5px;
+}
+
+/* === PROJECTS === */
+.project-card {
+  background: var(--white);
+  border-left: 4px solid var(--teal);
+  padding: 1rem;
+  margin: 1rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 6px;
+}
+
+.project-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid var(--teal);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-card a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* === CERTIFICATIONS === */
+.cert-card {
+  background-color: var(--white);
+  padding: 1rem;
+  margin: 1rem 2rem;
+  border-left: 4px solid var(--teal);
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cert-card a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.cert-card a:hover {
+  text-decoration: underline;
+}
+
+/* === TESTIMONIALS === */
+.testimonials {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--teal);
+  margin-bottom: 10px;
+}
+
+
+.testimonial h4 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* === CONTACT FORM === */
+.form-container {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 191, 165, 0.1);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid var(--teal);
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  box-shadow: 0 0 6px var(--teal);
+}
+
+.form-container button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--teal);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: fit-content;
+  align-self: center;
+}
+
+.form-container button:hover {
+  background-color: #009e88;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  color: var(--gray);
+  margin-top: 3rem;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}
