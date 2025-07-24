@@ -280,6 +280,37 @@ header p {
   font-size: 1.2rem;
 }
 
+/* === PROJECT PARTNERS === */
+#project-partner {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.partner-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.partner-row img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--teal);
+  box-shadow: 0 0 15px #00fff7, 0 0 25px #0ff;
+  transition: transform 0.3s ease;
+}
+
+.partner-row img:hover {
+  transform: scale(1.05);
+}
+
+
+
 /* === CONTACT FORM === */
 .form-container {
   background-color: #ffffff;
